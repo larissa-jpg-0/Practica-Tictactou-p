@@ -1,23 +1,44 @@
-﻿using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
+using TicTacToe.Models;
 namespace TicTacToe;
-
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
 public partial class MainWindow : Window
 {
-    public MainWindow()
-    {
-        InitializeComponent();
-    }
+Juego juego;
+public MainWindow()
+{
+InitializeComponent();
+juego = new Juego();
+}
+private void Button_Click(object sender, RoutedEventArgs e)
+{
+Button boton = sender as Button;
+int posicion = int.Parse(boton.Name.Replace("B", ""));
+bool movimientoValido = juego.Jugar(posicion);
+if (!movimientoValido)
+{
+MessageBox.Show("Casilla ocupada");
+return;
+}
+boton.Content = juego.JugadorActual.Simbolo;
+if (juego.HayGanador())
+{
+MessageBox.Show($"{juego.JugadorActual.Nombre} ganó");
+DesactivarBotones();
+return;
+}
+juego.CambiarTurno();
+}
+private void DesactivarBotones()
+{
+B0.IsEnabled = false;
+B1.IsEnabled = false;
+B2.IsEnabled = false;
+B3.IsEnabled = false;
+B4.IsEnabled = false;
+B5.IsEnabled = false;
+B6.IsEnabled = false;
+B7.IsEnabled = false;
+B8.IsEnabled = false;
+}
 }
