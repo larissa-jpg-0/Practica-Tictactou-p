@@ -27,7 +27,8 @@ public partial class MainWindow : Window
             boton.IsEnabled = true; 
         }
     }
-//IA
+
+
     private void IA()
     {
         string simbolo_IA = juego.JugadorActual.Simbolo;
@@ -49,7 +50,11 @@ public partial class MainWindow : Window
         juego.Jugar(randomNumber);
 
         botones[randomNumber].Content = simbolo_IA;
-    }    
+
+        
+
+    }
+
     private void Button_Click(object sender, RoutedEventArgs e)
     {
         Button boton = sender as Button;

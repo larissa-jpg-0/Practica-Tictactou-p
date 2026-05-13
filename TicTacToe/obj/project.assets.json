@@ -8,19 +8,19 @@
     "net10.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\APPLE TEHUACAN\\.nuget\\packages\\": {}
+    "C:\\Users\\laris\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\APPLE TEHUACAN\\Practica-Tictactou-p\\TicTacToe\\TicTacToe.csproj",
+      "projectUniqueName": "C:\\Users\\laris\\OneDrive\\Escritorio\\Progra Orientada a Objetos\\tictac otra vez\\Practica-Tictactou-p\\TicTacToe\\TicTacToe.csproj",
       "projectName": "TicTacToe",
-      "projectPath": "C:\\Users\\APPLE TEHUACAN\\Practica-Tictactou-p\\TicTacToe\\TicTacToe.csproj",
-      "packagesPath": "C:\\Users\\APPLE TEHUACAN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\APPLE TEHUACAN\\Practica-Tictactou-p\\TicTacToe\\obj\\",
+      "projectPath": "C:\\Users\\laris\\OneDrive\\Escritorio\\Progra Orientada a Objetos\\tictac otra vez\\Practica-Tictactou-p\\TicTacToe\\TicTacToe.csproj",
+      "packagesPath": "C:\\Users\\laris\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\laris\\OneDrive\\Escritorio\\Progra Orientada a Objetos\\tictac otra vez\\Practica-Tictactou-p\\TicTacToe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\APPLE TEHUACAN\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\laris\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0-windows"
