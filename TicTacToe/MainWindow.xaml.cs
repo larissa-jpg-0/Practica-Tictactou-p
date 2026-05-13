@@ -10,6 +10,47 @@ public MainWindow()
 InitializeComponent();
 juego = new Juego();
 }
+
+//  Reiniciar
+
+ private void ReiniciarJuego(){
+        juego = new Juego();
+
+        Button[] botones = { B0, B1, B2, B3, B4, B5, B6, B7, B8 };
+
+        foreach (Button boton in botones)
+        {
+            boton.Content = "";     
+            boton.IsEnabled = true; 
+        }
+    }
+
+
+  //Uso de IA
+    private void IA()
+    {
+        string simbolo_IA = juego.JugadorActual.Simbolo;
+        Button[] botones = { B0, B1, B2, B3, B4, B5, B6, B7, B8 };
+        Random random = new Random();
+        int randomNumber = random.Next(9);
+        for(int i = 0; i<1000; i++)
+        {
+            if(botones[randomNumber].Content == "X" || botones[randomNumber].Content == "O")
+            {
+                randomNumber = random.Next(9);
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        juego.Jugar(randomNumber);
+
+        botones[randomNumber].Content = simbolo_IA;
+
+    }
+
 private void Button_Click(object sender, RoutedEventArgs e)
 {
 Button boton = sender as Button;
@@ -24,8 +65,11 @@ boton.Content = juego.JugadorActual.Simbolo;
 if (juego.HayGanador())
 {
 MessageBox.Show($"{juego.JugadorActual.Nombre} ganó");
+
+{
 DesactivarBotones();
 return;
+}
 }
 juego.CambiarTurno();
 }

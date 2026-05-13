@@ -1,10 +1,12 @@
 namespace TicTacToe.Models;
 public class Juego
 {
+  //Atributos y encapsulamiento
 public Jugador JugadorActual { get; set; }
 public Jugador Jugador1 { get; set; }
 public Jugador Jugador2 { get; set; }
 public Tablero Tablero { get; set; }
+  //Constructor
 public Juego()
 {
 Jugador1 = new Jugador("Jugador 1", "X");
@@ -12,6 +14,8 @@ Jugador2 = new Jugador("Jugador 2", "O");
 JugadorActual = Jugador1;
 Tablero = new Tablero();
 }
+
+   //Metodos
 public bool Jugar(int posicion)
 {
 return Tablero.ColocarSimbolo(posicion, JugadorActual.Simbolo);
@@ -20,6 +24,12 @@ public bool HayGanador()
 {
 return Tablero.VerificarGanador(JugadorActual.Simbolo);
 }
+
+ public bool HayEmpate()
+    {
+        return Tablero.DetectarEmpate(JugadorActual.Simbolo);
+    }
+
 public void CambiarTurno()
 {
 if (JugadorActual == Jugador1)
